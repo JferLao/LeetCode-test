@@ -1,0 +1,9 @@
+{
+  "name": "leetcode",
+  "version": "0.0.1",
+  "description": "leetcode by jferlao",
+  "main": "index.js",
+  "repository": "https://github.com/JferLao/LeetCode-test.git",
+  "author": "jferlao <https://github.com/JferLao>",
+  "license": "MIT"
+}
