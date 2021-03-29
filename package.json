@@ -5,5 +5,30 @@
   "main": "index.js",
   "repository": "https://github.com/JferLao/LeetCode-test.git",
   "author": "jferlao <https://github.com/JferLao>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "jest  --watchAll"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.13",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "@types/jest": "^26.0.22",
+    "babel-jest": "^26.6.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^5.2.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "regenerator-runtime": "^0.13.7",
+    "ts-jest": "^26.5.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  }
 }
