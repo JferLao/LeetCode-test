@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function twoSum(nums: number[], target: number): number[] {
+function twoSum(nums: number[], target: number) {
   let j: number = 0;
   for (let i = 0; i < nums.length; i++) {
     j = nums.slice(i + 1).findIndex((el) => el === target - nums[i]) + i + 1;
