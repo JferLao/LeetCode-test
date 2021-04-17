@@ -19,16 +19,20 @@
 // }
 
 function sortedArrayToBST(nums: number[]): TreeNode | null {
-  if (!nums.length) {
+  return buildBST(nums, 0, nums.length - 1); 
+}
+
+function buildBST(nums:number[], start:number, end:number) {
+  if (start > end) { // 构成不了区间
     return null
   }
+  const minIndex = Math.floor((start + end) / 2)  
+  const root = new TreeNode(nums[minIndex]);
 
-  const pos = Math.ceil((nums.length - 1) / 2)
-  const node = new TreeNode(nums[pos])
-
-  node.left = sortedArrayToBST(nums.slice(0, pos))
-  node.right = sortedArrayToBST(nums.slice(pos + 1))
-
-  return node
+  root.left = buildBST(nums, start, minIndex - 1); // 构建左子树 
+  root.right = buildBST(nums, minIndex + 1, end); // 构建左子树 
+  return root;
 }
+
+
 // @lc code=end
